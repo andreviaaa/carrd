@@ -1,0 +1,436 @@
+@font-face {
+    font-family: "Acme-Regular";
+    src: url("Acme-Regular.ttf") format("truetype");
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: red;
+    background: yellow;
+}
+
+::selection {
+    color: red;
+    background: yellow;
+}
+
+:root {
+    --body-color: #ffffff;
+    --card-color: #f7f7f7;
+    --title-color: #555;
+    --text-color: #666;
+    --number-color: #333;
+}
+
+.dark-mode {
+    --body-color: #11151d;
+    --card-color: #1b202d;
+    --title-color: #c3c9d2;
+    --text-color: #c3c9d2;
+    --number-color: #434c5e;
+}
+
+.icons-container {
+    padding: 0.3rem 0;
+    margin-bottom: -1.4rem;
+}
+
+.icon {
+    margin-right: 3.5px;
+    transition: 0.3s;
+    width: 24px;
+    height: 24px;
+    display: inline;
+    filter: contrast(0%);
+}
+
+.icon:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+
+.mail {
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    top: 0.4rem;
+    right: 0.4rem;
+    z-index: 3;
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.mail:hover {
+    opacity: 1;
+}
+
+
+.logo {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0.4rem;
+    left: 0.4rem;
+    z-index: 3;
+    transition: 0.3s;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+/* NAVIGATION MENU SPECIAL EDIT FOR LI */
+.menuli {
+    font-family: "Acme-Regular", sans-serif;
+    text-decoration: none;
+    color: white;
+    line-height: 4rem;
+}
+
+.menuli:hover {
+    color: grey;
+}
+
+/* NAVIGATION MENU FOR SPECIAL EDIT LI END */
+
+/* POPUP SECTION (FOR NAVIGATION MENU MAINLY) */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-height: 500px;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    text-align: center;
+    z-index: 400;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup__close:link,
+.popup__close:visited {
+    position: absolute;
+    top: -6.5rem;
+    right: -0.4rem;
+    display: inline-block;
+    color: white;
+    font-size: 5.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-family: "Acme-Regular", sans-serif;
+}
+
+.popup__close:hover {
+    color: red;
+}
+
+.popup__right {
+    font-size: 1.7rem;
+    width: 75%;
+    max-width: 1000px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    // box-shadow: ;
+    border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+    .popup__right {
+        font-size: 2rem;
+    }
+}
+
+.popup__right h2 {
+    margin: 2.5rem 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .popup__right h2 {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup__top {
+        padding: 1rem;
+    }
+}
+
+.popup__contact-info {
+    background: #293335;
+    color: #91abaa;
+    margin-top: 1rem;
+    padding: 1rem 1rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .popup__contact-info {
+        padding: 1rem 0 1rem;
+        margin-top: 2rem;
+    }
+}
+
+.popup__contact-info ul {
+    padding-bottom: 0;
+}
+
+.popup__contact-info a {
+    color: #91abaa !important;
+    text-decoration: none;
+}
+
+/* POPUP SECTION END (FOR NAVIGATION MENU MAINLY)  END*/
+
+.popup__talk {
+    font-size: 1.7rem;
+    width: 75%;
+    max-width: 1000px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    box-shadow: ;
+    border-radius: 3px;
+}
+
+.hi__pic {
+    width: auto;
+    text-align: center;
+    height: 125px;
+    margin-top: -2.5rem;
+    margin-bottom: -2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popup__text {
+    font=family: "Cutive Mono", monospace;
+    font-size: 12px;
+    font-weight: 200;
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    background-color: grey;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.popup__buttons {
+    background-color: #5266d4;
+    font-family: "Acme-Regular", sans-serif;
+    border-radius: 12px;
+    color: #fff;
+    padding: 11px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .popup__buttons {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
+
+@media (min-width: 360px) {
+    .popup__buttons {
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+}
+
+
+.ico {
+    filter: contrast(0%);
+    width: 110px;
+    height: auto;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.ico:hover {
+    filter: contrast(80%);
+}
+
+.ico5 {
+    transform: rotate(-15deg);
+    margin-top: -25px;
+    animation: djContrastBlink 0.7s infinite steps(1);
+}
+
+@keyframes djContrastBlink {
+    0% {
+        filter: contrast(40%) saturate(120%);
+    }
+
+    35% {
+        filter: contrast(120%) saturate(160%);
+    }
+
+    60% {
+        filter: contrast(90%) saturate(140%);
+    }
+
+    100% {
+        filter: contrast(40%) saturate(120%);
+    }
+}
+
+
+.bgi {
+    filter: grayscale(100%);
+    position: absolute;
+    top: 180px;
+    left: -5px;
+    width: 100px;
+    animation: djBlink 0.5s infinite alternate;
+}
+
+@keyframes djBlink {
+    0% {
+        filter: grayscale(100%) opacity(1);
+    }
+
+    25% {
+        filter: grayscale(0%) opacity(1);
+    }
+
+    50% {
+        filter: grayscale(100%) opacity(0.3);
+    }
+
+    75% {
+        filter: grayscale(0%) opacity(1);
+    }
+
+    100% {
+        filter: grayscale(100%) opacity(1);
+    }
+}
+
+.bgi:hover {
+    filter: grayscale(0%);
+}
+
+.flow {
+    position: absolute;
+    bottom: -255px;
+    filter: grayscale(100%);
+}
+
+@media (max-width: 410px) {
+    .right {
+        display: none;
+    }
+
+    .rightd {
+        margin-top: -40px;
+        justify-content: center;
+        display: flex;
+        padding-top: 1rem;
+    }
+
+    .bgi {
+        top: 220px;
+        left: 250px;
+    }
+
+    .ico {
+        width: 80px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .flow {
+        bottom: -295px;
+    }
+
+
+}
+
+@media (max-width: 370px) {
+    .right {
+        display: none;
+    }
+
+    .rightd {
+        margin-top: -30px;
+        justify-content: center;
+        display: flex;
+        padding-top: 1rem;
+    }
+
+    .bgi {
+        top: 180px;
+        left: 220px;
+    }
+
+    .ico {
+        width: 80px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .flow {
+        bottom: -272px;
+    }
+
+
+}
+
+/* SNOWFALL PROPERTY CSS START */
+#emoji-snowfall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.snowflake {
+    position: absolute;
+    font-size: 24px;
+    user-select: none;
+    pointer-events: none;
+    will-change: transform;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) translateX(0);
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(20px);
+    }
+}
